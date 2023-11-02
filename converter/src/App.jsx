@@ -1,4 +1,4 @@
-import Body from "./components/body"
+import Body from "./components/Input"
 import useCurrency from "./hooks/useCurrency"
 
 function App() {
@@ -6,15 +6,10 @@ function App() {
 
   return (
     <>
-    <div>
-      <div>
-      <Body label='From'></Body>
-      </div>
-      <div>
-      <Body label='To'></Body>
-      </div>
-      <button>Convert</button>
-    </div>
+   
+     
+      <Body ></Body>
+  
     
     </>
   )
