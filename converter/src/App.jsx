@@ -1,5 +1,4 @@
-import Body from "./components/Input"
-import useCurrency from "./hooks/useCurrency"
+import Body from "./components/body.jsx"
 
 function App() {
   

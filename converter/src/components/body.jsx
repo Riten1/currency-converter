@@ -26,10 +26,10 @@ const swap = () => {
   return (
     <>
     <div>
-      <Input title='From' amount={amount} currencyList = {options} onAmountChange ={(amount) => setAmount(amount)} onChangeSelected={(currency) => setFrom(currency)} selectedCurency ={from}></Input>
+      <Input label='From' amount={amount} currencyList = {options} onAmountChange ={(amount) => setAmount(amount)} onChangeSelected={(currency) => setFrom(currency)} selectedCurency ={from}></Input>
     </div>
     <div>
-    <Input label='To' amount={amount} currencyList = {options} onAmountChange ={(amount) => setAmount(amount)} onChangeSelected={(currency) => setTo(currency)} selectedCurency ={to}></Input>
+    <Input label='To' amount={resultAmount} currencyList = {options} onChangeSelected={(currency) => setTo(currency)} selectedCurency ={to}></Input>
 
     </div>
     <button onClick={result}>Convert{from.toUpperCase()} to {to.toUpperCase()}</button>
