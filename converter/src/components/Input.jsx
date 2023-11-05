@@ -21,22 +21,19 @@ const Input = ({
           }
           className="bg-gray-100 h-8"
         ></input>
-        
-        
+
         <select
           className="border-2 border-solid border-gray-300 rounded-e-md h-8 "
           value={selectedCurency}
           onChange={(e) => onChangeSelected && onChangeSelected(e.target.value)}
         >
           {currencyList.map((curr) => (
-            <option key={curr} value={curr} >
+            <option key={curr} value={curr}>
               {curr}
             </option>
           ))}
         </select>
-      
       </div>
-      
     </div>
   );
 };
