@@ -9,7 +9,6 @@ const useCurrency = (currency) => {
       .then((res) => res.json())
       .then((res) => setInfo(res[currency]));
   }, [currency]);
-  console.log(info);
   return info;
 };
 

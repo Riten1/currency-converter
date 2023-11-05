@@ -3,7 +3,7 @@ import Input from "./Input";
 import useCurrency from "../hooks/useCurrency";
 
 const Body = () => {
-  const [amount, setAmount] = useState(0);
+  const [amount, setAmount] = useState();
   const [from, setFrom] = useState("usd");
   const [to, setTo] = useState("npr");
   const [resultAmount, setResultAmount] = useState(0);
@@ -14,14 +14,12 @@ const Body = () => {
   const swap = () => {
     setFrom(to);
     setTo(from);
-    setResultAmount(amount);
-    setAmount(resultAmount);
   };
 
   const result = () => {
     setResultAmount(amount * currencyDetails[to]);
   };
-  console.log(resultAmount.toFixed(2));
+
 
   return (
     <>
@@ -44,9 +42,12 @@ const Body = () => {
           selectedCurency={to}
         ></Input>
       </div>
+      <button onClick={swap}>Swap</button>
       <button onClick={result}>
         Convert {from.toUpperCase()} to {to.toUpperCase()}
       </button>
+
+    
     </>
   );
 };
