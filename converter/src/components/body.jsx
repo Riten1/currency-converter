@@ -20,10 +20,14 @@ const Body = () => {
     setResultAmount(amount * currencyDetails[to]);
   };
 
-
   return (
-    <>
-      <div>
+    <div className="w-100 h-screen flex justify-center items-center">
+    <div className="inline-block ">
+      <div className="text-blue-600 font-bold font-quickSand text-3xl">
+        Currency <span className="block mt-1">Converter<span className="text-emerald-400">.</span></span>
+      </div>
+      <div className="mt-10 inline-block">
+      <div >
         <Input
           label="From"
           amount={amount}
@@ -32,6 +36,9 @@ const Body = () => {
           onChangeSelected={(currency) => setFrom(currency)}
           selectedCurency={from}
         ></Input>
+      </div>
+      <div className="flex justify-center items-center mt-3 mb-3">
+      <button className='bg-emerald-400 text-white w-full cursor-pointer rounded-md font-quickSand pt-1 pb-1 font-bold' onClick={swap}>Swap</button>
       </div>
       <div>
         <Input
@@ -42,13 +49,14 @@ const Body = () => {
           selectedCurency={to}
         ></Input>
       </div>
-      <button onClick={swap}>Swap</button>
-      <button onClick={result}>
+     <div className="flex justify-center items-center mt-3 mb-3">
+      <button className='bg-emerald-400 text-white w-full cursor-pointer rounded-md font-quickSand pt-1 pb-1 font-bold' onClick={result}>
         Convert {from.toUpperCase()} to {to.toUpperCase()}
       </button>
-
-    
-    </>
+      </div>
+      </div>
+      </div>
+    </div>
   );
 };
 

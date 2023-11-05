@@ -11,7 +11,7 @@ const Input = ({
   return (
     <div>
       <div>
-        <label>{label}</label>
+        <label className="font-quickSand block font-bold">{label}</label>
         <input
           type="number"
           placeholder="amount"
@@ -19,21 +19,24 @@ const Input = ({
           onChange={(e) =>
             onAmountChange && onAmountChange(Number(e.target.value))
           }
+          className="bg-gray-100 h-8"
         ></input>
-      </div>
-      <div>
-        <p>Currency Type</p>
+        
+        
         <select
+          className="border-2 border-solid border-gray-300 rounded-e-md h-8 "
           value={selectedCurency}
           onChange={(e) => onChangeSelected && onChangeSelected(e.target.value)}
         >
           {currencyList.map((curr) => (
-            <option key={curr} value={curr}>
+            <option key={curr} value={curr} >
               {curr}
             </option>
           ))}
         </select>
+      
       </div>
+      
     </div>
   );
 };
