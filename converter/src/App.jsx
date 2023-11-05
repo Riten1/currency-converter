@@ -1,17 +1,11 @@
-import Body from "./components/body.jsx"
+import Body from "./components/body.jsx";
 
 function App() {
-  
-
   return (
     <>
-   
-     
-      <Body ></Body>
-  
-    
+      <Body></Body>
     </>
-  )
+  ) 
 }
 
-export default App
+export default App;
